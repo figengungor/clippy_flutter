@@ -9,7 +9,7 @@ class StarClipper extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    int numberOfPoints = 6;
+    int numberOfPoints = this.numberOfPoints ?? 5;
     double width = size.width;
 
     double halfWidth = width / 2;
