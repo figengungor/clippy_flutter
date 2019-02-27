@@ -1,11 +1,17 @@
 import 'package:flutter/widgets.dart';
 import 'package:clippy_flutter/src/label_clipper.dart';
 import 'package:clippy_flutter/src/edge.dart';
+import 'package:clippy_flutter/src/clip_shadow.dart';
 export 'package:clippy_flutter/src/edge.dart';
+export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Label extends StatelessWidget {
   const Label(
-      {Key key, this.triangleHeight, this.child, this.edge = Edge.RIGHT})
+      {Key key,
+      this.triangleHeight,
+      this.child,
+      this.edge = Edge.RIGHT,
+      this.clipShadows = const []})
       : super(key: key);
 
   ///The widget which is going to be clipped as label shape
@@ -17,11 +23,18 @@ class Label extends StatelessWidget {
   ///The edge that triangle clipping is going to be applied
   final Edge edge;
 
+  ///List of shadows to be cast on the border
+  final List<ClipShadow> clipShadows;
+
   @override
   Widget build(BuildContext context) {
-    return ClipPath(
-      clipper: LabelClipper(triangleHeight, edge),
-      child: child,
+    var clipper = LabelClipper(triangleHeight, edge);
+    return CustomPaint(
+      painter: ClipShadowPainter(clipper, clipShadows),
+      child: ClipPath(
+        clipper: clipper,
+        child: child,
+      ),
     );
   }
 }
