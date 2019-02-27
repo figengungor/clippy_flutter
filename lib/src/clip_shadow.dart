@@ -10,7 +10,7 @@ class ClipShadowPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     clipShadows.forEach((ClipShadow shadow) {
       canvas.drawShadow(
-          clipper.getClip(size), shadow.color, shadow.elevation, false);
+          clipper.getClip(size), shadow.color, shadow.elevation, true);
     });
   }
 
