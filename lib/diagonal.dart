@@ -1,6 +1,8 @@
+import 'package:clippy_flutter/src/clip_shadow.dart';
 import 'package:clippy_flutter/src/diagonal_clipper.dart';
 import 'package:flutter/widgets.dart';
 export 'package:clippy_flutter/src/diagonal_clipper.dart' show DiagonalPosition;
+export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Diagonal extends StatelessWidget {
   const Diagonal(
@@ -8,7 +10,8 @@ class Diagonal extends StatelessWidget {
       @required this.child,
       @required this.clipHeight,
       this.position = DiagonalPosition.BOTTOM_LEFT,
-      this.axis = Axis.horizontal})
+      this.axis = Axis.horizontal,
+      this.clipShadows = const []})
       : assert(child != null),
         super(key: key);
 
@@ -23,11 +26,18 @@ class Diagonal extends StatelessWidget {
   ///The direction of the diagonal
   final Axis axis;
 
+  ///List of shadows to be cast on the border
+  final List<ClipShadow> clipShadows;
+
   @override
   Widget build(BuildContext context) {
-    return ClipPath(
-      clipper: DiagonalClipper(clipHeight, position, axis),
-      child: child,
+    var clipper = DiagonalClipper(clipHeight, position, axis);
+    return CustomPaint(
+      painter: ClipShadowPainter(clipper, clipShadows),
+      child: ClipPath(
+        clipper: clipper,
+        child: child,
+      ),
     );
   }
 }

@@ -21,6 +21,7 @@ class DiagonalDemoState extends State<DiagonalDemo> {
           overflow: Overflow.visible,
           children: <Widget>[
             Diagonal(
+              clipShadows: [ClipShadow(color: Colors.black)],
               position: position,
               clipHeight: clipHeight,
               child: Container(

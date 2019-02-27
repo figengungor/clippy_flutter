@@ -18,6 +18,7 @@ class MessageDemo extends StatelessWidget {
               triangleX2: 0.5 * messageBoxWidth,
               triangleX3: 0.5 * messageBoxWidth,
               triangleY1: messageBoxHeight * 0.2,
+              clipShadows: [ClipShadow(color: Colors.black)],
               child: Container(
                 color: Colors.pink,
                 width: messageBoxWidth,

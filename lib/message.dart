@@ -1,5 +1,7 @@
 import 'package:clippy_flutter/src/message_clipper.dart';
 import 'package:flutter/widgets.dart';
+import 'package:clippy_flutter/src/clip_shadow.dart';
+export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Message extends StatelessWidget {
   const Message(
@@ -8,7 +10,8 @@ class Message extends StatelessWidget {
       @required this.triangleX2,
       @required this.triangleX3,
       @required this.triangleY1,
-      this.child})
+      this.child,
+      this.clipShadows = const []})
       : super(key: key);
 
   ///The left corner distance of triangle to widget's left edge
@@ -25,11 +28,19 @@ class Message extends StatelessWidget {
 
   final Widget child;
 
+  ///List of shadows to be cast on the border
+  final List<ClipShadow> clipShadows;
+
   @override
   Widget build(BuildContext context) {
-    return ClipPath(
-      clipper: MessageClipper(triangleX1, triangleX2, triangleX3, triangleY1),
-      child: child,
+    var clipper =
+        MessageClipper(triangleX1, triangleX2, triangleX3, triangleY1);
+    return CustomPaint(
+      painter: ClipShadowPainter(clipper, clipShadows),
+      child: ClipPath(
+        clipper: clipper,
+        child: child,
+      ),
     );
   }
 }
