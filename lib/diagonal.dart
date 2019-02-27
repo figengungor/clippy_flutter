@@ -2,6 +2,7 @@ import 'package:clippy_flutter/src/clip_shadow.dart';
 import 'package:clippy_flutter/src/diagonal_clipper.dart';
 import 'package:flutter/widgets.dart';
 export 'package:clippy_flutter/src/diagonal_clipper.dart' show DiagonalPosition;
+export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Diagonal extends StatelessWidget {
   const Diagonal(
