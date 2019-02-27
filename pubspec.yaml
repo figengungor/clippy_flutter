@@ -1,6 +1,6 @@
 name: clippy_flutter
 description: Clip your widgets with custom shapes provided.
-version: 1.0.0
+version: 1.1.0
 author: Figen Güngör <figengungor1@gmail.com>
 homepage: https://github.com/figengungor/clippy_flutter
 
