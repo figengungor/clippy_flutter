@@ -19,12 +19,14 @@ class TicketDemo extends StatelessWidget {
               SizedBox(height: 16.0),
               Ticket(
                 radius: 10.0,
+                clipShadows: [ClipShadow(color: Colors.black)],
                 child: Image.asset(
                   'assets/bohemian_rapsody.png',
                 ),
               ),
               Ticket(
                 radius: 10.0,
+                clipShadows: [ClipShadow(color: Colors.black)],
                 child: Container(
                   color: Colors.white,
                   child: Column(

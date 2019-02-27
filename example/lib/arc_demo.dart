@@ -10,6 +10,7 @@ class ArcDemo extends StatelessWidget {
         children: <Widget>[
           Arc(
             height: 30.0,
+            clipShadows: [ClipShadow(color: Colors.black)],
             child: Stack(
               children: <Widget>[
                 Image.asset(

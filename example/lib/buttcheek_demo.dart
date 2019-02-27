@@ -9,6 +9,7 @@ class ButtCheekDemo extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           ButtCheek(
+            clipShadows: [ClipShadow(color: Colors.black)],
             height: 20.0,
             child: Container(
               child: Image.asset('assets/coffee.png'),
