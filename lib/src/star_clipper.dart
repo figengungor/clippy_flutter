@@ -4,12 +4,11 @@ import 'package:flutter/widgets.dart';
 class StarClipper extends CustomClipper<Path> {
   StarClipper(this.numberOfPoints);
 
-  ///The
+  ///The number of points of the star
   final int numberOfPoints;
 
   @override
   Path getClip(Size size) {
-    int numberOfPoints = 6;
     double width = size.width;
 
     double halfWidth = width / 2;
