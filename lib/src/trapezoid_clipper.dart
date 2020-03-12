@@ -56,7 +56,7 @@ class TrapezoidClipper extends CustomClipper<Path> {
     path.moveTo(0.0, cutLength);
     path.lineTo(0.0, size.height - cutLength);
     path.lineTo(size.width, size.height);
-    path.lineTo(size.height, 0.0);
+    path.lineTo(size.width, 0.0);
     path.close();
     return path;
   }
