@@ -1,13 +1,4 @@
 .DS_Store
-.dart_tool/
-
-.packages
-.pub/
-
-build/
-ios/.generated/
-ios/Flutter/Generated.xcconfig
-ios/Runner/GeneratedPluginRegistrant.*
 
 # Miscellaneous
 *.class
@@ -15,7 +6,6 @@ ios/Runner/GeneratedPluginRegistrant.*
 *.log
 *.pyc
 *.swp
-.DS_Store
 .atom/
 .buildlog/
 .history
@@ -32,12 +22,15 @@ ios/Runner/GeneratedPluginRegistrant.*
 
 # Flutter/Dart/Pub related
 **/doc/api/
-.dart_tool/
 .flutter-plugins
-.packages
 .pub-cache/
+.dart_tool/
+.packages
 .pub/
 build/
+ios/.generated/
+ios/Flutter/Generated.xcconfig
+ios/Runner/GeneratedPluginRegistrant.*
 
 # Android related
 **/android/**/gradle-wrapper.jar

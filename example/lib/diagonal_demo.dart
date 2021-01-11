@@ -18,7 +18,7 @@ class DiagonalDemoState extends State<DiagonalDemo> {
         body: Column(
       children: <Widget>[
         Stack(
-          overflow: Overflow.visible,
+          clipBehavior: Clip.none,
           children: <Widget>[
             Diagonal(
               clipShadows: [ClipShadow(color: Colors.black)],

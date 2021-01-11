@@ -55,7 +55,7 @@ class ArcDemo extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Synopsis',
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 SizedBox(height: 16.0),
                 Text(
