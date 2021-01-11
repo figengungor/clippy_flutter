@@ -2,8 +2,12 @@ import 'package:flutter/widgets.dart';
 import 'package:clippy_flutter/src/edge.dart';
 
 class TriangleClipper extends CustomClipper<Path> {
-  TriangleClipper(this.trianglePercentLeft, this.trianglePercentRight,
-      this.trianglePercentEdge, this.edge);
+  TriangleClipper(
+    this.trianglePercentLeft,
+    this.trianglePercentRight,
+    this.trianglePercentEdge,
+    this.edge,
+  );
 
   final double trianglePercentLeft;
   final double trianglePercentRight;

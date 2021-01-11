@@ -5,9 +5,9 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Bevel extends StatelessWidget {
   const Bevel(
-      {Key key,
-      @required this.cutLength,
-      this.child,
+      {Key? key,
+      required this.cutLength,
+      required this.child,
       this.clipShadows = const []})
       : super(key: key);
 

@@ -6,14 +6,13 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Diagonal extends StatelessWidget {
   const Diagonal(
-      {Key key,
-      @required this.child,
-      @required this.clipHeight,
+      {Key? key,
+      required this.child,
+      required this.clipHeight,
       this.position = DiagonalPosition.BOTTOM_LEFT,
       this.axis = Axis.horizontal,
       this.clipShadows = const []})
-      : assert(child != null),
-        super(key: key);
+      : super(key: key);
 
   final Widget child;
 

@@ -1,3 +1,7 @@
+## [2.0.0-nullsafety.0] - 1/11/2021
+
+* Migrated to null-safety
+
 ## [1.1.1] - 03/15/2020
 
 * Fix Trapezoid edge bug [PR #7](https://github.com/figengungor/clippy_flutter/pull/7) 

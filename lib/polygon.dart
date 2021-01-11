@@ -4,9 +4,12 @@ import 'package:clippy_flutter/src/clip_shadow.dart';
 export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Polygon extends StatelessWidget {
-  const Polygon(
-      {Key key, @required this.sides, this.child, this.clipShadows = const []})
-      : super(key: key);
+  const Polygon({
+    Key? key,
+    required this.sides,
+    required this.child,
+    this.clipShadows = const [],
+  }) : super(key: key);
 
   ///The widget that is going to be clipped as polygon shape
   final Widget child;

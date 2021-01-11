@@ -7,9 +7,9 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Trapezoid extends StatelessWidget {
   const Trapezoid(
-      {Key key,
-      @required this.cutLength,
-      this.child,
+      {Key? key,
+      required this.cutLength,
+      required this.child,
       this.edge = Edge.TOP,
       this.clipShadows = const []})
       : super(key: key);

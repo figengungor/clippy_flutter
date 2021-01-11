@@ -7,18 +7,18 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Triangle extends StatelessWidget {
   const Triangle(
-      {Key key,
-      this.trianglePercentLeft,
-      this.trianglePercentRight,
-      this.trianglePercentEdge,
-      this.child,
+      {Key? key,
+      required this.trianglePercentLeft,
+      required this.trianglePercentRight,
+      required this.trianglePercentEdge,
+      required this.child,
       this.edge = Edge.RIGHT,
       this.clipShadows = const []})
       : super(key: key);
 
   const Triangle.isosceles(
-      {Key key,
-      this.child,
+      {Key? key,
+      required this.child,
       this.edge = Edge.RIGHT,
       this.clipShadows = const []})
       : this.trianglePercentRight = 0,
@@ -38,7 +38,11 @@ class Triangle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var clipper = TriangleClipper(
-        trianglePercentLeft, trianglePercentRight, trianglePercentEdge, edge);
+      trianglePercentLeft,
+      trianglePercentRight,
+      trianglePercentEdge,
+      edge,
+    );
     return CustomPaint(
       painter: ClipShadowPainter(clipper, clipShadows),
       child: ClipPath(

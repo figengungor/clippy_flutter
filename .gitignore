@@ -31,6 +31,7 @@ build/
 ios/.generated/
 ios/Flutter/Generated.xcconfig
 ios/Runner/GeneratedPluginRegistrant.*
+.fvm/
 
 # Android related
 **/android/**/gradle-wrapper.jar

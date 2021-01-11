@@ -7,9 +7,9 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Parallelogram extends StatelessWidget {
   const Parallelogram(
-      {Key key,
-      this.cutLength,
-      this.child,
+      {Key? key,
+      required this.cutLength,
+      required this.child,
       this.edge = Edge.RIGHT,
       this.clipShadows = const []})
       : super(key: key);

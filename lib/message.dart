@@ -5,12 +5,12 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Message extends StatelessWidget {
   const Message(
-      {Key key,
-      @required this.triangleX1,
-      @required this.triangleX2,
-      @required this.triangleX3,
-      @required this.triangleY1,
-      this.child,
+      {Key? key,
+      required this.triangleX1,
+      required this.triangleX2,
+      required this.triangleX3,
+      required this.triangleY1,
+      required this.child,
       this.clipShadows = const []})
       : super(key: key);
 

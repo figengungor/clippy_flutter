@@ -4,9 +4,12 @@ import 'package:clippy_flutter/src/clip_shadow.dart';
 export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Ticket extends StatelessWidget {
-  const Ticket(
-      {Key key, @required this.radius, this.child, this.clipShadows = const []})
-      : super(key: key);
+  const Ticket({
+    Key? key,
+    required this.radius,
+    required this.child,
+    this.clipShadows = const [],
+  }) : super(key: key);
 
   ///The widget that is going to be clipped as ticket shape
   final Widget child;

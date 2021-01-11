@@ -5,11 +5,13 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Star extends StatelessWidget {
   const Star(
-      {Key key,
-      this.child,
+      {Key? key,
+      required this.child,
       this.numberOfPoints = 6,
       this.clipShadows = const []})
-      : super(key: key);
+      :
+        assert(numberOfPoints>0),
+        super(key: key);
 
   ///The widget that is going to be clipped as star shape
   final Widget child;

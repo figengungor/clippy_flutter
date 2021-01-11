@@ -7,9 +7,9 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Chevron extends StatelessWidget {
   const Chevron(
-      {Key key,
-      @required this.triangleHeight,
-      this.child,
+      {Key? key,
+      required this.triangleHeight,
+      required this.child,
       this.edge = Edge.RIGHT,
       this.clipShadows = const []})
       : super(key: key);

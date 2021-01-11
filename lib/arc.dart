@@ -9,9 +9,9 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Arc extends StatelessWidget {
   const Arc(
-      {Key key,
-      @required this.height,
-      @required this.child,
+      {Key? key,
+      required this.height,
+      required this.child,
       this.edge = Edge.BOTTOM,
       this.arcType = ArcType.CONVEX,
       this.clipShadows = const []})

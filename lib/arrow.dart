@@ -7,10 +7,10 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Arrow extends StatelessWidget {
   const Arrow(
-      {Key key,
-      @required this.triangleHeight,
-      @required this.rectangleClipHeight,
-      this.child,
+      {Key? key,
+      required this.triangleHeight,
+      required this.rectangleClipHeight,
+      required this.child,
       this.edge = Edge.RIGHT,
       this.clipShadows = const []})
       : super(key: key);

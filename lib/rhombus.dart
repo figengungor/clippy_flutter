@@ -4,8 +4,11 @@ import 'package:clippy_flutter/src/clip_shadow.dart';
 export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Rhombus extends StatelessWidget {
-  const Rhombus({Key key, this.child, this.clipShadows = const []})
-      : super(key: key);
+  const Rhombus({
+    Key? key,
+    required this.child,
+    this.clipShadows = const [],
+  }) : super(key: key);
 
   ///The widget that is going to be clipped as rhombus
   final Widget child;

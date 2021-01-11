@@ -5,9 +5,9 @@ export 'package:clippy_flutter/src/clip_shadow.dart' show ClipShadow;
 
 class Rabbet extends StatelessWidget {
   const Rabbet(
-      {Key key,
-      @required this.cutLength,
-      @required this.child,
+      {Key? key,
+      required this.cutLength,
+      required this.child,
       this.clipShadows = const []})
       : super(key: key);
 
