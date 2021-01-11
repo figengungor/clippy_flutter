@@ -1,3 +1,7 @@
+## [2.0.0-nullsafety.1] - 1/11/2021
+
+* Lower dart sdk min constraint limit
+
 ## [2.0.0-nullsafety.0] - 1/11/2021
 
 * Migrated to null-safety
